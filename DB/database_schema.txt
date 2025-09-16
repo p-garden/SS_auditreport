@@ -1,0 +1,501 @@
+Table 재고자산_내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  구분 TEXT 
+  당기말평가전금액 REAL 
+  당기말평가충당금 REAL 
+  당기말장부가액 REAL 
+  단위 TEXT 
+}
+
+Table sqlite_sequence {
+  name  
+  seq  
+}
+
+Table 종속기업_관계기업_공동기업_투자_변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  구분 TEXT 
+  변동내역 REAL 
+  단위 TEXT 
+}
+
+Table 종속기업_재무정보 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  기업명 TEXT 
+  자산 REAL 
+  부채 REAL 
+  매출액 REAL 
+  당기순이익 REAL 
+  단위 TEXT 
+}
+
+Table 유형자산_변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  구분 TEXT 
+  토지 REAL 
+  건물및구축물 REAL 
+  기계장치 REAL 
+  건설중인자산 REAL 
+  기타 REAL 
+  계 REAL 
+  단위 TEXT 
+}
+
+Table 무형자산_변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  구분 TEXT 
+  산업재산권 REAL 
+  개발비 REAL 
+  회원권 REAL 
+  영업권 REAL 
+  기타의무형자산 REAL 
+  계 REAL 
+  단위 TEXT 
+  기타 REAL 
+}
+
+Table 관계기업_투자주식_내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  구분 TEXT 
+  주식수 REAL 
+  시장가치 REAL 
+  장부금액 REAL 
+  단위 TEXT 
+}
+
+Table 관계기업_투자_현황 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  기업명 TEXT 
+  관계의성격 TEXT 
+  지분율 REAL 
+  주사업장 TEXT 
+}
+
+Table 관계기업_재무정보 {
+  id INTEGER [pk]
+  기업명 TEXT 
+  연도 INTEGER 
+  유동자산 REAL 
+  비유동자산 REAL 
+  유동부채 REAL 
+  비유동부채 REAL 
+  순자산 REAL 
+  매출 REAL 
+  계속영업손익 REAL 
+  기타포괄손익 REAL 
+  총포괄손익 REAL 
+  단위 TEXT 
+  세후중단영업이익 REAL 
+  세후중단영업손익 REAL 
+}
+
+Table Level3_금융상품_변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  단위 TEXT 
+  구분 TEXT 
+  값 REAL 
+}
+
+Table 기타자본 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  금액 REAL 
+  단위 TEXT 
+}
+
+Table 법인세 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  금액 REAL 
+  단위 TEXT 
+}
+
+Table 비용수익 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  금액 REAL 
+  단위 TEXT 
+}
+
+Table 자본금_이익잉여금 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  금액 REAL 
+  단위 TEXT 
+}
+
+Table 주당이익_배당 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  금액 REAL 
+  단위 TEXT 
+}
+
+Table 환율변동위험 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 INTEGER 
+}
+
+Table 부채비율 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 INTEGER 
+}
+
+Table 공정가치 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 INTEGER 
+}
+
+Table 공정가치_민감도분석 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+}
+
+Table 부문별_보고 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 INTEGER 
+}
+
+Table 유동성위험 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  단위 TEXT 
+  구분 TEXT 
+  기간 TEXT 
+  값 REAL 
+}
+
+Table 공정가치_수준별 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  자산부채 TEXT 
+  구분 TEXT 
+  수준 INTEGER 
+  값 REAL 
+  단위 TEXT 
+}
+
+Table 거래내역 {
+  id INTEGER [pk]
+  구분 TEXT 
+  기업명 TEXT 
+  매출_등 REAL 
+  비유동자산_처분 REAL 
+  매입_등 REAL 
+  비유동자산_매입 REAL 
+  단위 TEXT 
+  연도 INTEGER 
+}
+
+Table 경영진보상 {
+  id INTEGER [pk]
+  구분 TEXT 
+  당기 REAL 
+  전기 REAL 
+  단위 TEXT 
+  연도 INTEGER 
+}
+
+Table 지배관계 {
+  id INTEGER [pk]
+  지역 TEXT 
+  기업명 TEXT 
+  업종 TEXT 
+  지분율_퍼센트 REAL 
+  연도 INTEGER 
+}
+
+Table 채권채무 {
+  id INTEGER [pk]
+  구분 TEXT 
+  기업명 TEXT 
+  채권_등 REAL 
+  채무_등 REAL 
+  단위 TEXT 
+  연도 INTEGER 
+}
+
+Table 매각예정분류 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  값_유형 TEXT 
+}
+
+Table 무상할당_배출권 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  무상할당_배출권 REAL 
+  배출량_추정치 REAL 
+}
+
+Table 사외적립자산 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  급여지급액 REAL 
+  기말 REAL 
+  기초 REAL 
+  기타 REAL 
+  이자수익 REAL 
+  재측정요소 REAL 
+}
+
+Table 확정급여채무_민감도분석 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  임금상승률_감소 REAL 
+  임금상승률_증가 REAL 
+  할인율_감소 REAL 
+  할인율_증가 REAL 
+}
+
+Table 보험수리적_가정 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  미래임금상승률 REAL 
+  할인율 REAL 
+}
+
+Table 충당부채 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  판매보증 REAL 
+  기술사용료 REAL 
+  장기성과급 REAL 
+  기타 REAL 
+  계 REAL 
+}
+
+Table 확정급여제도_비용 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  매출원가 REAL 
+  판매비와관리비_등 REAL 
+}
+
+Table 확정급여제도_관련_비용 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  과거근무원가 REAL 
+  당기근무원가 REAL 
+  순이자수익 REAL 
+  순이자원가 REAL 
+}
+
+Table 확정급여채무_변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  값_유형 TEXT 
+}
+
+Table 확정급여채무_통합 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  변동내역 TEXT 
+  단위 TEXT 
+  기금_미적립_현재가치 REAL 
+  기금_적립_현재가치 REAL 
+  사외적립자산_공정가치 REAL 
+}
+
+Table 매도가능금융자산_변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 매도가능금융자산_상장주식 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 매출채권_할인내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 매출채권과미수금 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 매출채권과미수금_연체일구분 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 매출채권과미수금_충당금변동내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 범주별금융상품_금융부채 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 범주별금융상품_금융자산 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 범주별순손익구분_금융부채 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 범주별순손익구분_금융자산 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 사채내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 사채상환내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
+Table 차입금내역 {
+  id INTEGER [pk]
+  연도 INTEGER 
+  항목 TEXT 
+  변동내역 TEXT 
+  금액 REAL 
+  단위 TEXT 
+  단위_배수 REAL 
+  조정된_금액 REAL 
+}
+
