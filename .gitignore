@@ -1,3 +1,6 @@
 outputs/*
 *.html
 DB_csv/*
+network/*
+.env
+parser_preprocessing/*
